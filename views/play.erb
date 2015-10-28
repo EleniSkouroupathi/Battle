@@ -7,3 +7,11 @@
 <%= @player_1_name %>: 80HP
 <%= @player_2_name %>: 80HP
 </div>
+
+<h1><%= @player_1_name %> starts</h1>
+<h2><%= @player_1_name %> Press Attack</h2>
+
+<form action="/attack_player" method="get">
+<input type="submit" value="Attack">
+</form>
+
