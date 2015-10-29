@@ -1,20 +1,23 @@
+<h1>
+<div> 
+Superman and Batman are in battle!
+</div>
+</h1>
+
+<h1> Superman starts</h1>
+<h2><%= @player_1_name.name %> Press Attack</h2>
+
 
 <div>
-<%= @player_1_name %> vs. <%= @player_2_name %>
+	<img src= 'http://cdn1.tabletmag.com/wp-content/files_mf/superman.jpg' width="700" height="320">
 </div>
 
-<div>
-<%= @player_1_name %>: 80HP
-<%= @player_2_name %>: 80HP
-</div>
-
-<h1><%= @player_1_name %> starts</h1>
-<h2><%= @player_1_name %> Press Attack</h2>
-
-<form action="/attack_player" method="get">
-<input type="submit" value="Attack">
+<form action="/attacked" method="post">
+	<input type="submit" value="Attack!" />
 </form>
 
+<h2>
 <div>
-	<img src= 'http://cdn1.tabletmag.com/wp-content/files_mf/superman.jpg'>
+<%= @player_1_name.name %>: <%= @player_1_name.default_points %>HP  <%= @player_2_name.name %>: <%= @player_2_name.default_points %>HP
 </div>
+</h2>

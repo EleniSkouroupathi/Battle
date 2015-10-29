@@ -12,7 +12,7 @@ describe Battle do
 		scenario 'Attacks other player and gets confirmation' do
 		sign_in_and_play
 		click_button 'Attack'
-		expect(page).to have_content 'Player 1 attacked player 2!'
+		expect(page).to have_content 'Superman attacked Batman'
 	end
 	end
 
@@ -20,7 +20,6 @@ describe Battle do
 		scenario 'Attack reduces other player\'s HP' do
 			sign_in_and_play
 			click_button 'Attack'
-			expect(page).not_to have_content 'Eleni: 80HP'
 			expect(page).to have_content 'Eleni: 60HP'
 		end
 	end
