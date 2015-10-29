@@ -16,4 +16,13 @@ describe Battle do
 	end
 	end
 
+	feature 'Reduce HP by 20HP' do
+		scenario 'Attack reduces other player\'s HP' do
+			sign_in_and_play
+			click_button 'Attack'
+			expect(page).not_to have_content 'Eleni: 80HP'
+			expect(page).to have_content 'Eleni: 60HP'
+		end
+	end
+
 end
