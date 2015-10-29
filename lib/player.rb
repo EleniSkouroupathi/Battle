@@ -9,12 +9,12 @@ DEFAULT_POINTS = 80
     @default_points = default_points
   end
 
-  def attack(player)
-  	player.receive_damage
-  end
 
-  def receive_damage
-  	@default_points -= 20
-  end
+
+
+    def receive_damage
+  		@default_points -= 20
+  	end
 
 end
+
