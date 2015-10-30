@@ -1,0 +1,17 @@
+
+<h1>Batman attacked Superman!</h1>
+<h2>Superman lost <%= 80 - @player_1_name.hp %>HP</h2>
+
+<div>
+	<img src= 'http://static.srcdn.com/slir/w786-h393-q90-c786:393/wp-content/uploads/Batman-V-Superman-Promo-Art-Batman-Punches-Superman.jpg' width="700" height="320">
+</div>
+
+<h2>
+<div>
+<%= @player_1_name.name %>: <%= @player_1_name.hp %>HP <%= @player_2_name.name %>: <%= @player_2_name.hp %>HP
+</div>
+</h2>
+
+<form action="/test3" method="post">
+	<input type="submit" value="Next Attack" />
+</form>

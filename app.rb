@@ -49,6 +49,27 @@ end
     erb :next_turn
   end
 
+  post '/test2' do
+    $game.attack($game.player1)
+    @player_1_name = $game.player1
+  	@player_2_name = $game.player2
+    @current_player = $game.current_player
+    redirect('/next_attack')
+  end
+
+  get '/next_attack' do
+    @player_1_name = $game.player1
+    @player_2_name = $game.player2
+    @current_player = $game.current_player
+    erb :next_attack
+  end
+
+  post '/test3' do
+    @player_1_name = $game.player1
+  	@player_2_name = $game.player2
+    @current_player = $game.current_player
+    redirect('/play')
+  end
 
   # start the server if ruby file executed directly
   run! if app_file == $0
