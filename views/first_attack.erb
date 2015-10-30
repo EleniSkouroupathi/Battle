@@ -1,6 +1,6 @@
 
 <h1>Superman attacked Batman!</h1>
-<h2>Batman lost 20 HP</h2>
+<h2>Batman lost <%= 80 - @player_2_name.hp %>HP</h2>
 
 <div>
 	<img src= 'http://cdn.ebaumsworld.com/mediaFiles/picture/1969178/81467914.jpg' width="700" height="320">
@@ -11,3 +11,8 @@
 <%= @player_1_name.name %>: <%= @player_1_name.hp %>HP <%= @player_2_name.name %>: <%= @player_2_name.hp %>HP
 </div>
 </h2>
+
+<form action="/test" method="post">
+	<input type="submit" value="Next Turn" />
+</form>
+

@@ -34,6 +34,17 @@ class Battle < Sinatra::Base
   	erb :first_attack
 end
 
+  post '/test' do
+    redirect('/next_turn')
+  end
+
+  get '/next_turn' do
+    @player_1_name = $game.player1
+    @player_2_name = $game.player2
+    erb :next_turn
+  end
+
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end
