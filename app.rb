@@ -20,6 +20,7 @@ class Battle < Sinatra::Base
   get '/play' do
   	@player_1_name = $game.player1
   	@player_2_name = $game.player2
+    @current_player = $game.current_player
   	erb :play
   end
 
@@ -37,12 +38,14 @@ end
   post '/test' do
     @player_1_name = $game.player1
   	@player_2_name = $game.player2
+    @current_player = $game.current_player
     redirect('/next_turn')
   end
 
   get '/next_turn' do
     @player_1_name = $game.player1
     @player_2_name = $game.player2
+    @current_player = $game.current_player
     erb :next_turn
   end
 
