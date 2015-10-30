@@ -10,7 +10,7 @@ DEFAULT_POINTS = 80
   end
 
   def receive_damage
-    	@hp -= 20
-  	end	
+    	@hp -= rand(1..30)
+  	end
 
 end

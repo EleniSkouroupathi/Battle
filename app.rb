@@ -35,6 +35,8 @@ class Battle < Sinatra::Base
 end
 
   post '/test' do
+    @player_1_name = $game.player1
+  	@player_2_name = $game.player2
     redirect('/next_turn')
   end
 
